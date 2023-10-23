@@ -66,7 +66,7 @@ else:
                 ocorr = row.get("Ocorr")
 
                 # Aplicar os filtros, incluindo a verificação de "Romaneio" igual a 0
-                if int(romaneio) == 0 and mot_dev != "1" and quant_cx > 0:
+                if int(romaneio) == 0 and mot_dev == "" and quant_cx > 0:
                     descricao, un = cod_red_to_desc_un.get(cod_red, ("Descrição não encontrada", "Unidade não encontrada"))
                     if descricao in quantidades_por_descricao:
                         quantidades_por_descricao[descricao] = (quantidades_por_descricao[descricao][0] + quant_cx, un)
